@@ -1,6 +1,6 @@
 Package: weatherlink
 Type: Package
-Title: weatherlink Title Goes Here Otherwise CRAN Checks Fail
+Title: Query and Orchestrate the Davis WeatherLink API
 Version: 0.1.0
 Date: 2020-10-05
 Authors@R: c(
@@ -8,7 +8,9 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: Davis Instruments provides a public API (<https://weatherlink.github.io/v2-api/>)
+    for owners and users of their weather datalogger products. Tools are provided to query
+    and orchestrate the Davis WeatherLink API (V2).
 URL: https://git.rud.is/hrbrmstr/weatherlink
 BugReports: https://git.rud.is/hrbrmstr/weatherlink/issues
 Encoding: UTF-8
@@ -19,6 +21,7 @@ Depends:
     R (>= 3.6.0)
 Imports: 
     httr,
-    jsonlite
+    jsonlite,
+    anytime
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1

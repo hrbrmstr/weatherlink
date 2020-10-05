@@ -4,9 +4,15 @@
 \name{weatherlink}
 \alias{weatherlink}
 \alias{weatherlink-package}
-\title{...}
+\title{Query and Orchestrate the Davis WeatherLink API}
 \description{
-A good description goes here otherwise CRAN checks fail.
+Davis Instruments provides a public API (\url{https://weatherlink.github.io/v2-api/})
+for owners and users of their weather datalogger products. Tools are provided to query
+and orchestrate the Davis WeatherLink API (V2)
+}
+\references{
+\href{https://weatherlink.github.io/v2-api/api-reference}{API Endpoint};
+\href{https://weatherlink.github.io/v2-api/data-structure-types}{Data structure types}
 }
 \seealso{
 Useful links:

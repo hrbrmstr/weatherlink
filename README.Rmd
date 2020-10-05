@@ -8,7 +8,7 @@ hrbrpkghelpr::global_opts()
 ```
 
 ```{r badges, results='asis', echo=FALSE, cache=FALSE}
-hrbrpkghelpr::stinking_badges()
+hrbrpkghelpr::stinking_badges(branch = "batman")
 ```
 
 ```{r description, results='asis', echo=FALSE, cache=FALSE}
@@ -22,6 +22,15 @@ The following functions are implemented:
 ```{r ingredients, results='asis', echo=FALSE, cache=FALSE}
 hrbrpkghelpr::describe_ingredients()
 ```
+
+## TODO
+
+Add coverage for the following API endpoints:
+
+- `/stations/{station-ids}`
+- `/nodes/{node-ids}`
+- `/sensors/{sensor-ids}`
+- `/sensor-activity/{sensor-ids}`
 
 ## Installation
 
