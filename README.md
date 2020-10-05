@@ -53,6 +53,8 @@ remotes::install_git("https://git.rud.is/hrbrmstr/weatherlink.git")
 remotes::install_git("https://git.sr.ht/~hrbrmstr/weatherlink")
 # or
 remotes::install_bitbucket("hrbrmstr/weatherlink")
+# or
+remotes::install_github("hrbrmstr/weatherlink")
 ```
 
 NOTE: To use the ‘remotes’ install options you will need to have the
