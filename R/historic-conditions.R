@@ -10,7 +10,7 @@
 #' @references [API Endpoint](https://weatherlink.github.io/v2-api/api-reference);
 #'   [Data structure types](https://weatherlink.github.io/v2-api/data-structure-types)
 #' @export
-wl_conditions <- function(station_id,
+wl_historic_conditions <- function(station_id,
                           api_key = Sys.getenv("WEATHERLINK_API_KEY"),
                           api_secret = Sys.getenv("WEATHERLINK_API_SECRET")) {
 

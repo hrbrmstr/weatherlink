@@ -29,6 +29,8 @@ the Davis WeatherLink API (V2).
 The following functions are implemented:
 
   - `wl_conditions`: Get current conditions data for one station
+  - `wl_historic_conditions`: Get historic conditions data for one
+    station
   - `wl_nodes`: Get all nodes attached to all weather stations
     associated with your API Key
   - `wl_sensor_activity`: Get latest reporting times for all sensors
