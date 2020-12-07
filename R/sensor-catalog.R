@@ -13,12 +13,12 @@ wl_sensors <- function(api_key = Sys.getenv("WEATHERLINK_API_KEY"),
                        api_secret = Sys.getenv("WEATHERLINK_API_SECRET")) {
 
   list(
-    `api-key` = Sys.getenv("WEATHERLINK_API_KEY"),
+    `api-key` = api_key,
     `t` = as.character(as.integer(Sys.time()))
   ) -> params
 
   digest::hmac(
-    key = Sys.getenv("WEATHERLINK_API_SECRET"),
+    key = api_secret,
     object = paste(names(params), as.character(params), sep = "", collapse = ""),
     algo = "sha256"
   ) -> params[["api-signature"]]
