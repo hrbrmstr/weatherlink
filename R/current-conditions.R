@@ -29,7 +29,7 @@ wl_conditions <- function(station_id,
   httr::GET(
     url = sprintf("https://api.weatherlink.com/v2/current/%s", as.character(station_id[1])),
     query = list(
-      `api-key` = Sys.getenv("WEATHERLINK_API_KEY"),
+      `api-key` = api_key,
       `t` = as.character(as.integer(Sys.time())),
       `api-signature` = params[["api-signature"]]
     ),
