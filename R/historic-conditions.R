@@ -15,13 +15,13 @@ wl_historic_conditions <- function(station_id,
                           api_secret = Sys.getenv("WEATHERLINK_API_SECRET")) {
 
   list(
-    `api-key` = Sys.getenv("WEATHERLINK_API_KEY"),
+    `api-key` = api_key,
     `station-id` = station_id[1],
     `t` = as.character(as.integer(Sys.time()))
   ) -> params
 
   digest::hmac(
-    key = Sys.getenv("WEATHERLINK_API_SECRET"),
+    key = api_secret,
     object = paste(names(params), as.character(params), sep = "", collapse = ""),
     algo = "sha256"
   ) -> params[["api-signature"]]
@@ -29,7 +29,7 @@ wl_historic_conditions <- function(station_id,
   httr::GET(
     url = sprintf("https://api.weatherlink.com/v2/historic/%s", as.character(station_id[1])),
     query = list(
-      `api-key` = Sys.getenv("WEATHERLINK_API_KEY"),
+      `api-key` = api_key,
       `t` = as.character(as.integer(Sys.time())),
       `api-signature` = params[["api-signature"]]
     ),
